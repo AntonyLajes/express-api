@@ -1,4 +1,14 @@
 {
+    "overrides": [
+        {
+            "files": [
+                "*.d.ts"
+            ],
+            "rules": {
+                "@typescript-eslint/no-unused-vars": "off"
+            }
+        }
+    ],
     "extends": [
         "@rocketseat/eslint-config/node"
     ]
