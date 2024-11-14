@@ -63,7 +63,7 @@ export async function transactionsRoutes(server: FastifyInstance){
     server.get('/summary', { preHandler: [checkSessionIdExists]}, async (req) => {
         const { sessionId } = req.cookies
 
-        const summary = await knex("transactions").where('session_id', sessionId).sum("amount", { as: "amount" })
+        const summary = await knex("transactions").where('session_id', sessionId).sum("amount", { as: "amount" }).first()
 
         return { summary }
     })
