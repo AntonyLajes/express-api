@@ -85,7 +85,7 @@ describe('transactions routes', () => {
         })
     })
 
-    test.only("should return summary", async () => {
+    test("should return summary", async () => {
         const firstTransactionResponse = await request(app.server)
             .post('/transactions/')
             .send({
